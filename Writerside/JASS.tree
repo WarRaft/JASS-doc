@@ -20,4 +20,5 @@
         <toc-element topic="code.md"/>
         <toc-element topic="handle.md"/>
     </toc-element>
+    <toc-element topic="operator.md"/>
 </instance-profile>
