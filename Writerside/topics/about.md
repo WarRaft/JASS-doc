@@ -4,5 +4,5 @@
 
 ## Полезные ссылки
 
-https://jass.sourceforge.net/doc/
-https://lep.duckdns.org/jassbot/
+- <a href="https://jass.sourceforge.net/doc/" />
+- <a href="https://lep.duckdns.org/jassbot/" />
