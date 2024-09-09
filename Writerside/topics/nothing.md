@@ -1,8 +1,10 @@
 # nothing
 
-Не совсем тип, а синтаксическая конструкция для указания того, что функция ничего не принимает или не возвращает.
+Не совсем тип, а синтаксическая конструкция для указания того, что [функция](function.md) ничего
+не [принимает](arguments.md) или не
+[возвращает](return.md).
 
 ```SQL
-function myFunc takes nothing returns nothing
+function main takes nothing returns nothing
 endfunction
 ```

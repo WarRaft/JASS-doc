@@ -19,7 +19,7 @@
 
 ```c++
 globals
-    bool A = true
+    boolean A = true
 endglobals
 ```
 
@@ -30,7 +30,7 @@ endglobals
 
 ```c++
 globals
-    bool A = not false // true
+    boolean A = not false // true
 endglobals
 ```
 
@@ -40,7 +40,7 @@ endglobals
 
 ```c++
 globals
-    bool A = true == false // false
+    boolean A = true == false // false
 endglobals
 ```
 
@@ -51,7 +51,7 @@ endglobals
 
 ```c++
 globals
-    bool A = true != false // true
+    boolean A = true != false // true
 endglobals
 ```
 
@@ -62,7 +62,7 @@ endglobals
 
 ```c++
 globals
-    bool A = true and false // false
+    boolean A = true and false // false
 endglobals
 ```
 
@@ -73,6 +73,6 @@ endglobals
 
 ```c++
 globals
-    bool A = true or false // true
+    boolean A = true or false // true
 endglobals
 ```
