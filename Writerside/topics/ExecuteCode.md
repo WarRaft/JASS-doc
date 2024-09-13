@@ -6,7 +6,8 @@
 native ExecuteCode takes code c returns nothing
 ```
 
-Она использует тип [code](code.md), тем самым производя штатный вызов функции.
+Она использует тип [code](code.md), тем самым производя штатный вызов функции который практически ничем не отличается от
+явного [вызова функции](call.md).
 
 ```SQL
 function A takes code B returns nothing

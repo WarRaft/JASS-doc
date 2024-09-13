@@ -1,5 +1,7 @@
 # Массивы
 
+<show-structure for="chapter,procedure" depth="3"/>
+
 Для объявления массива используется ключевое слово `array`. Инициализировать массив, как и указать его размер при
 объявлении нельзя.
 
@@ -7,13 +9,13 @@
 
 ```SQL
 globals
-integer array a
+    integer array a
 endglobals
 
 function main takes nothing returns nothing
-local integer array b
-set a[0] = 1
-set b[0] = a[0] + 2
+    local integer array b
+    set a[0] = 1
+    set b[0] = a[0] + 2
 endfunction
 ```
 
@@ -72,28 +74,28 @@ endfunction
 
 ```SQL
 globals
-integer array a
+    integer array a
 endglobals
 
 function main takes nothing returns nothing
-set a[500] = 0 // Допустим мы прикинули, что количество элементов будет около 300
+    set a[500] = 0 // Допустим мы прикинули, что количество элементов будет около 300
 endfunction
 ```
 
 Память выделяется в момент присваивания значения по индексу, так что само значение неважно:
 ```SQL
 globals
-integer array i
-string array s
-unit array u
-rect array r
+    integer array i
+    string array s
+    unit array u
+    rect array r
 endglobals
 
 function main takes nothing returns nothing
-set i[500] = 0
-set s[500] = ""
-set u[500] = null
-set r[500] = null
+    set i[500] = 0
+    set s[500] = ""
+    set u[500] = null
+    set r[500] = null
 endfunction
 ```
 

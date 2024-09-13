@@ -6,5 +6,20 @@
 результате локальная переменная скрывает переменную из внешнего контекста, делая ее недоступной в
 текущей области видимости.
 
-> В дальнейшем этот раздел будет дополнен более точной информацией.
+Единственное допустимое перекрытие это перекрытие [глобальной](globals.md) переменной [аргументом](arguments.md).
+
+```SQL
+globals
+    integer A = 1
+endglobals
+
+function Test takes string A returns nothing
+    call ConsolePrint(A) // A
+endfunction
+
+function main takes nothing returns nothing
+    call Test("A")
+    call ConsolePrint(I2S(A)) // 1
+endfunction
+```
 

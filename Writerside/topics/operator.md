@@ -35,10 +35,10 @@
 <tr><td>!=</td><td>Не равно</td><td>a!=b</td></tr>
 
 <tr><td colspan="3">Приоритет: <format style="bold">7</format>, ассоциативность: <format style="bold">%ltr%</format></td></tr>
-<tr><td>and</td><td>Логическое И</td><td>a and b</td></tr>
+<tr><td>and</td><td><a href="and.md">Логическое И</a></td><td>a and b</td></tr>
 
 <tr><td colspan="3">Приоритет: <format style="bold">8</format>, ассоциативность: <format style="bold">%ltr%</format></td></tr>
-<tr><td>or</td><td>Логическое ИЛИ</td><td>a or b</td></tr>
+<tr><td>or</td><td><a href="or.md">Логическое ИЛИ</a></td><td>a or b</td></tr>
 
 <tr><td colspan="3">Приоритет: <format style="bold">9</format>, ассоциативность: <format style="bold">%rtl%</format></td></tr>
 <tr><td>=</td><td>Присваивание</td><td>a=b</td></tr>
@@ -47,14 +47,14 @@
 <tr><td>,</td><td>Перечисление</td><td>a,b</td></tr>
 </table>
 
-## Ассоциативность
+## Ассоциативность {id="associativity"}
 
 Определяет направление разбора выражения.
 
-## Приоритет
+## Приоритет {id="precedence"}
 
 Определяет приоритет выполнения операций.
 
 Чем меньше значение в таблице тем приоритет считается выше,
 то бишь операция выполнится раньше других. Для операций с одинаковым приоритетом операции будут выполняться в порядке,
-заданном ассоциативностью.
+заданном [ассоциативностью](#associativity).
