@@ -13,6 +13,12 @@ env:
   INSTANCE: 'Writerside/JASS'
   ARTIFACT: 'webHelpJASS2-all.zip'
   DOCKER_VERSION: '241.15989'
+  ALGOLIA_ARTIFACT: 'algolia-indexes-JASS.zip'
+  ALGOLIA_APP_NAME: 'JASS-doc'
+  ALGOLIA_INDEX_NAME: 'JASS-doc'
+  ALGOLIA_KEY: '${{ secrets.ALGOLIA_KEY }}'
+  CONFIG_JSON_PRODUCT: 'JASS'
+  CONFIG_JSON_VERSION: '1.0'
 
 jobs:
   build:
@@ -76,3 +82,24 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+    publish-indexes:
+      needs: [ build, test, deploy ]
+      runs-on: ubuntu-latest
+      container:
+        image: registry.jetbrains.team/p/writerside/builder/algolia-publisher:2.0.32-3
+      steps:
+        - name: Download artifact
+          uses: actions/download-artifact@v4
+          with:
+            name: docs
+        - name: Unzip artifact
+          run: |
+            unzip -O UTF-8 -qq '${{ env.ALGOLIA_ARTIFACT }}' -d algolia-indexes
+            env algolia-key='${{env.ALGOLIA_KEY}}' java -jar /opt/builder/help-publication-agent.jar \
+            update-index \
+            --application-name '${{env.ALGOLIA_APP_NAME}}' \
+            --index-name '${{env.ALGOLIA_INDEX_NAME}}' \
+            --product '${{env.CONFIG_JSON_PRODUCT}}' \
+            --version '${{env.CONFIG_JSON_VERSION}}' \
+            --index-directory algolia-indexes/ \
+            2>&1 | tee algolia-update-index-log.txt
