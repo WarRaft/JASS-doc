@@ -13,7 +13,7 @@ env:
   INSTANCE: 'Writerside/JASS'
   ARTIFACT: 'webHelpJASS2-all.zip'
   DOCKER_VERSION: '241.15989'
-  ALGOLIA_ARTIFACT: 'JASS'
+  ALGOLIA_ARTIFACT: 'algolia-indexes-JASS.zip'
   ALGOLIA_APP_NAME: 'JASS-doc'
   ALGOLIA_INDEX_NAME: 'JASS-doc'
   ALGOLIA_KEY: '${{ secrets.ALGOLIA_KEY }}'

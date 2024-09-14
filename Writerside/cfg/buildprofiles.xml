@@ -22,7 +22,7 @@
 
             <!-- https://www.jetbrains.com/help/writerside/algolia-search.html -->
             <algolia-id>IF7U02Q6VZ</algolia-id>
-            <algolia-index>JASS</algolia-index>
+            <algolia-index>algolia-indexes-JASS.zip</algolia-index>
             <algolia-api-key>a6a0cfa005a05348a7cf7eaaa9df635c</algolia-api-key>
 
             <!-- https://www.jetbrains.com/help/writerside/buildprofiles-xml.html#resizable-sidebar -->
