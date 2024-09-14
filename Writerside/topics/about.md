@@ -8,3 +8,4 @@
 - <a href="https://jass.sourceforge.net/doc/" />
 - <a href="https://lep.duckdns.org/jassbot/" />
 - <a href="https://xgm.guru/p/wc3/jass-crash-course"/>
+- <a href="https://xgm.guru/p/wc3/Perekhod-na-Jass-vq0"/>
