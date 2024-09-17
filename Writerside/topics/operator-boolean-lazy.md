@@ -1,11 +1,13 @@
 # Ленивое вычисление
 
+Рассмотрим поближе совокупную таблицу операторов [](and.md) и [](or.md):
+
 | _a_   | _b_   | _a_ `and` _b_ | _a_ `or` _b_ |
 |-------|-------|---------------|--------------|
-| true  | true  | true          | true         |
+| true  | true  |               | true         |
 | true  | false | false         | true         |
 | false | true  | false         | true         |
-| false | false | false         | false        |
+| false | false | false         |              |
 
 Как видите, вне зависимости от второго аргумента результат не меняется. Посему интерпретатор в таких случаях не считает
 второе выражение. В этом легко убедиться передав вторым выражением функцию:
@@ -23,7 +25,7 @@ function main takes nothing returns nothing
 endfunction
 ```
 
-== Минутка рукожопости ==
+## Минутка рукожопости
 
 В любом другом языке программирования выполнив эквивалент **false and true or true** вы получите `true` или его числовое
 представление в виде **1**. Но выполнив такой код в игре вы сильно удивитесь и можете заподозрить автора сей статьи во
@@ -31,9 +33,9 @@ endfunction
 
 ```sql
 if false and true or true then
-call BJDebugMsg("true")
+    call BJDebugMsg("true")
 else
-call BJDebugMsg("false")
+    call BJDebugMsg("false")
 endif
 ```
 
