@@ -12,13 +12,7 @@ permissions:
 env:
   INSTANCE: 'Writerside/JASS'
   ARTIFACT: 'webHelpJASS2-all.zip'
-  DOCKER_VERSION: '241.15989'
-  ALGOLIA_ARTIFACT: 'algolia-indexes-JASS-doc.zip'
-  ALGOLIA_APP_NAME: 'JASS-doc'
-  ALGOLIA_INDEX_NAME: 'JASS-doc'
-  ALGOLIA_KEY: '${{ secrets.ALGOLIA_KEY }}'
-  CONFIG_JSON_PRODUCT: 'JASS'
-  CONFIG_JSON_VERSION: '1.0'
+  DOCKER_VERSION: '242.21870'
 
 jobs:
   build:

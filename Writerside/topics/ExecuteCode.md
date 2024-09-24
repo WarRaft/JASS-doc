@@ -19,7 +19,7 @@ function C takes nothing returns nothing
 endfunction
 
 function main takes nothing returns nothing
-    call A(function C)
+    call A(function C) // Прямой вызов из main не работает. Потом напишу через таймер.
 endfunction
 ```
 

@@ -1,14 +1,9 @@
-globals
-    integer A = 1
-endglobals
-
-function Test takes string A returns nothing
-    call ConsolePrint(A) // A
+function B takes nothing returns nothing
+    call ConsolePrint("B")
 endfunction
 
 function main takes nothing returns nothing
-    call Test("A")
-    call ConsolePrint(I2S(A)) // 1
+    call ExecuteCode(function B)
 endfunction
 
 function config takes nothing returns nothing
