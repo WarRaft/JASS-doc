@@ -6,8 +6,8 @@
 native ExecuteCode takes code c returns nothing
 ```
 
-Она использует тип [code](code.md), тем самым производя штатный вызов функции который практически ничем не отличается от
-явного [вызова функции](call.md).
+Она использует тип [](code.md), тем самым производя штатный вызов функции который практически ничем не отличается от
+явного [](call.md).
 
 ```SQL
 function A takes code B returns nothing
@@ -15,11 +15,16 @@ function A takes code B returns nothing
 endfunction
 
 function C takes nothing returns nothing
-    //...
+    call ConsolePrint("test") // Выводим в консоль текст
+endfunction
+
+function D takes nothing returns nothing
+    call DestroyTimer(GetExpiredTimer()) // Уничтожаем использованный таймер
+    call A(function C)
 endfunction
 
 function main takes nothing returns nothing
-    call A(function C) // Прямой вызов из main не работает. Потом напишу через таймер.
+    call TimerStart(CreateTimer(), 0.0, false, function D) // Прямой вызов из main не работает, поэтому используйте отложенный запуск. 
 endfunction
 ```
 

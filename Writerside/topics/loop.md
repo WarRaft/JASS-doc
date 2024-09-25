@@ -13,7 +13,7 @@ endloop
 
 ### exitwhen
 
-Условие выхода из цикла. Можно вкладывать в [if](condition.md#if).
+Условие выхода из цикла. Можно вкладывать в [](condition.md#if).
 
 ```sql
 loop

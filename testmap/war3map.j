@@ -1,9 +1,14 @@
-function B takes nothing returns nothing
-    call ConsolePrint("B")
+function A takes real B, integer B, integer B returns nothing
+    local integer B
+    local integer B
+    local location B
+    local unit B
+    local string B = "Work"
+    call ConsolePrint(B)
 endfunction
 
 function main takes nothing returns nothing
-    call ExecuteCode(function B)
+    call A(1.2, 3, 4)
 endfunction
 
 function config takes nothing returns nothing

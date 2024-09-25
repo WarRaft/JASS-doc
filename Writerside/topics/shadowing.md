@@ -24,3 +24,4 @@ function main takes nothing returns nothing
 endfunction
 ```
 
+> Существует ещё один [бесполезный вариант](arguments.md#local) перекрытия аргументов с одинаковыми именами.

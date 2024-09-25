@@ -14,3 +14,5 @@ globals
     real C = -.1
 endglobals
 ```
+
+> Вещественные числа реализованы в игре как [float](https://learn.microsoft.com/en-us/cpp/cpp/data-type-ranges).

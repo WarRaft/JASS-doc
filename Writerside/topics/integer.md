@@ -3,12 +3,15 @@
 <show-structure for="chapter,procedure" depth="3"/>
 
 [Целые числа](https://w.wiki/9eVi) представлены в диапазоне от `-2,147,483,648` до `2,147,483,647`.
+
 ```SQL
 globals
     integer a = 100500
     integer b = -100500
 endglobals
 ```
+
+> Целые числа реализованы в игре как [int32](https://learn.microsoft.com/en-us/cpp/cpp/data-type-ranges).
 
 ## Восьмеричная запись
 

@@ -36,3 +36,26 @@ function main takes nothing returns nothing
     call C(A("1"), A("2")) // 12
 endfunction
 ```
+
+## Локальные переменные {id="local"}
+
+Внутренний механизм аргументов и [локальных переменных](local.md) одинаков за тем лишь различием, что аргументы можно
+передать в функцию извне.
+
+На уровне движка все они хранятся в функции, а доступ к ним осуществляется по имени. Поэтому такой код хоть и
+бесполезен, но вполне валиден.
+
+```sql
+function A takes real B, integer B, integer B returns nothing
+    local integer B
+    local integer B
+    local location B
+    local unit B
+    local string B = "Work"
+    call ConsolePrint(B) // Будет взят последний аргумент/[[[переменная|local.md]]] совпадающий по имени
+endfunction
+
+function main takes nothing returns nothing
+    call A(1.2, 3, 4)
+endfunction
+```
