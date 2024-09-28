@@ -33,9 +33,9 @@ endfunction
 
 ```sql
 if false and true or true then
-    call BJDebugMsg("true")
+    call ConsolePrint("true")
 else
-    call BJDebugMsg("false")
+    call ConsolePrint("false")
 endif
 ```
 

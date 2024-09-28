@@ -1,5 +1,7 @@
 # Циклы
 
+<show-structure for="chapter,procedure" depth="3"/>
+
 [Цикл](https://w.wiki/9kNy) это конструкция позволяющая многократно исполнять определённый набор инструкций.
 
 ## loop

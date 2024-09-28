@@ -276,7 +276,7 @@ abilitytype ConvertAbilityType(uint i)
 connectiontype ConvertConnectionType(uint i)
 ```
 
-## Граф зависимостей
+## Граф зависимостей {id="graph"}
 
 ```plantuml
 @startjson

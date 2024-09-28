@@ -1,15 +1,44 @@
 # null
 
-Специально обученный ноль, под который выделен специальный токен. Поэтому такой код не вызывает ошибку:
+<show-structure for="chapter,procedure" depth="3"/>
 
-```SQL
-globals
-    integer i = null
-    real r = null
-    handle h = null
-    string s = null
-endglobals
+Специально обученный ноль, под который выделено ключевое слово `null`.
+
+## boolean {id="boolean"}
+
+`null` нельзя явно присвоить переменной или вернуть из функции. Допустимо передать его [аргументом](arguments.md) где он
+будет преобразован в [](false.md).
+
+```sql
+function A takes boolean B returns nothing
+    // local boolean C = null // Ошибка! Нельзя явно присваивать null переменным с типом [[[boolean|boolean.md]]]
+
+    if B == true then
+        // Этот блок не сработает, так как [[[true|true.md]]] это единица
+        call ConsolePrint("true\n")
+    endif
+
+    if B == false then
+        // Этот блок сработает, так как [[[false|false.md]]] это ноль
+        call ConsolePrint("false\n")
+    endif
+
+    if B == null then
+        // Этот блок сработает, так как null это ноль
+        call ConsolePrint("null\n")
+    endif
+endfunction
+
+function main takes nothing returns nothing
+    call A(null) // При передаче null [[[аргументом|arguments.md]]] он будет превращён в [[[false|false.md]]]
+endfunction
 ```
 
-> Если вы используете одну из сборок [JNGP](https://xgm.guru/p/wc3/jngp-r-updated), то написанный
-> ногами [pjass](https://github.com/lep/pjass) не даст вам скомпилировать такой код.
+```sql
+function A takes nothing returns boolean
+    // return null // Ошибка! Нельзя явно указывать null возвращая [[[boolean|boolean.md]]]
+    return false
+endfunction
+```
+
+
