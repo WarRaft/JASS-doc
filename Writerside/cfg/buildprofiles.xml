@@ -20,6 +20,8 @@
 
             <webmaster>nazarpunk@gmail.com</webmaster>
 
+            <og-image>https://repository-images.githubusercontent.com/853768192/19282c6c-61ec-4fdd-a639-6cb91f2dd791</og-image>
+
             <!-- https://www.jetbrains.com/help/writerside/buildprofiles-xml.html#resizable-sidebar -->
             <resizable-sidebar>true</resizable-sidebar>
 
