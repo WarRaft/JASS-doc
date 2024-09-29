@@ -1,19 +1,17 @@
-function A takes boolean B returns nothing
-    if B == true then
-        call ConsolePrint("true\n")
-    endif
+function A takes location B returns location
+    local location C = null // Разрешено явно присваивать [[[null|null.md]]] переменным с типом наследующим [[[handle|handle.md]]]
 
-    if B == false then
-        call ConsolePrint("false\n")
-    endif
+    call ConsolePrint(I2S(GetHandleId(B))) // В консоль будет выведен ноль, так как объект не создан
 
     if B == null then
-        call ConsolePrint("null\n")
+        call ConsolePrint("Этот блок сработает так как передан [[[null|null.md]]]")
     endif
+
+    return null // Разрешено явно указывать [[[null|null.md]]] возвращая тип наследующий [[[handle|handle.md]]]
 endfunction
 
 function main takes nothing returns nothing
-    call A(null)
+    call A(null) // Передавая [[[null|null.md]]] как [[[аргумент|arguments.md]]] он будет передан как [[[null|null.md]]]
 endfunction
 
 function config takes nothing returns nothing
