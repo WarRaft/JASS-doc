@@ -1,23 +1,10 @@
-function A takes integer I, boolean B returns boolean
-    call ConsolePrint(I2S(I))
-    if B then
-        call ConsolePrint(" true\n")
-    else
-        call ConsolePrint(" false\n")
-    endif
-    return B
-endfunction
-
 function main takes nothing returns nothing
-    if A(1, true) or A(2, false) and A(3, false) then
-        call ConsolePrint("\nTRUE")
-    else
-        call ConsolePrint("\nFALSE")
-    endif
+    local integer A = MathRound(3.49) // 3
+    local integer B = MathRound(3.5) // 4
+    local integer C = MathRound(-3.49) // -3
+    local integer D = MathRound(-3.5) // -4
 
-    call ConsolePrint("\n\n 3")
-    // (true or false) and false -> true and false -> false
-    // true or (false and false) -> true or false -> true
+    call ConsolePrint(I2S(A) + "\n" + I2S(B)+ "\n" + I2S(C)+ "\n" + I2S(D) + "\nZ")
 endfunction
 
 function config takes nothing returns nothing
@@ -38,4 +25,3 @@ function config takes nothing returns nothing
     call SetPlayerSlotAvailable(Player(0), MAP_CONTROL_USER)
     call InitGenericPlayerSlots()
 endfunction
-

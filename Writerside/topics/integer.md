@@ -4,13 +4,6 @@
 
 [Целые числа](https://w.wiki/9eVi) представлены в диапазоне от `-2,147,483,648` до `2,147,483,647`.
 
-```SQL
-globals
-    integer a = 100500
-    integer b = -100500
-endglobals
-```
-
 > Целые числа реализованы в игре как [int32](https://learn.microsoft.com/en-us/cpp/cpp/data-type-ranges).
 
 ## Восьмеричная запись {id="radix8"}
@@ -20,6 +13,16 @@ endglobals
 globals
     integer a = 07
     integer b = -012
+endglobals
+```
+
+## Десятичная запись {id="radix10"}
+
+Запись числа в [восьмеричной](https://w.wiki/8W59) системе счисления начинается с ноля:
+```SQL
+globals
+    integer a = 100500
+    integer b = -100500
 endglobals
 ```
 
@@ -36,7 +39,7 @@ endglobals
 
 Запись регистронезависима. То бишь большие и маленькие буквы равноправны.
 
-## Равкоды {id="raw"}
+## Равкоды {id="rawcode"}
 
 Знаки между одинарными кавычками в простонародии зовутся [равкодами](https://xgm.guru/p/wc3/rawcode).
 

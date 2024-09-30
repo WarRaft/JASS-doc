@@ -1,4 +1,6 @@
-set ujapi=C:\Users\nazarpunk\Desktop\UjAPI\UjAPILauncher.exe
-set mpq=C:\Users\nazarpunk\Desktop\MPQEditor\MPQEditor.exe
-set map=C:\Users\nazarpunk\Desktop\jasstest.w3x
+set folder=C:\Users\nazarpunk\Desktop
+
+set ujapi="%folder%\UjAPI\UjAPILauncher.exe"
+set mpq="%folder%\MPQEditor\MPQEditor.exe"
+set map="%folder%\jasstest.w3x"
 set root=Z:
