@@ -12,8 +12,8 @@ globals
     integer D = 'A' // [[[Равкод|integer.md#rawcode]]]
 
     real E = 1.1 // [[[Полная запись|real.md]]]
-    real F = .1 // Опущенный ноль в начале
-    real G = 1. // Опущенный ноль в конце
+    real F = .1 // Опущеный ноль в начале
+    real G = 1. // Опущеный ноль в конце
 endglobals
 ```
 

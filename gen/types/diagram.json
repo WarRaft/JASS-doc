@@ -1,0 +1,188 @@
+{
+    "handle": {
+        "agent": {
+            "ability": {
+                "buff": ""
+            },
+            "boolexpr": {
+                "conditionfunc": "",
+                "filterfunc": ""
+            },
+            "button": "",
+            "defeatcondition": "",
+            "dialog": "",
+            "event": "",
+            "fogmodifier": "",
+            "force": "",
+            "framehandle": "",
+            "gamecache": "",
+            "group": "",
+            "handlelist": "",
+            "hashtable": "",
+            "leaderboard": "",
+            "location": "",
+            "multiboard": "",
+            "multiboarditem": "",
+            "orderhandle": "",
+            "player": "",
+            "quest": "",
+            "questitem": "",
+            "rect": "",
+            "region": "",
+            "sound": "",
+            "textfilehandle": "",
+            "timer": "",
+            "timerdialog": "",
+            "trigger": "",
+            "triggeraction": "",
+            "triggercondition": "",
+            "war3image": {
+                "doodad": "",
+                "effect": "",
+                "projectile": "",
+                "sprite": "",
+                "trackable": "",
+                "widget": {
+                    "destructable": "",
+                    "item": "",
+                    "unit": ""
+                }
+            }
+        },
+        "agentdatafield": {
+            "abilitybooleanfield": {
+                "abilitybooleanlevelfield": {
+                    "abilitybooleanlevelarrayfield": ""
+                }
+            },
+            "abilityintegerfield": {
+                "abilityintegerlevelfield": {
+                    "abilityintegerlevelarrayfield": ""
+                }
+            },
+            "abilityrealfield": {
+                "abilityreallevelfield": {
+                    "abilityreallevelarrayfield": ""
+                }
+            },
+            "abilitystringfield": {
+                "abilitystringlevelfield": {
+                    "abilitystringlevelarrayfield": ""
+                }
+            },
+            "destructablestringfield": "",
+            "itembooleanfield": "",
+            "itemintegerfield": "",
+            "itemrealfield": "",
+            "itemstringfield": "",
+            "unitbooleanfield": "",
+            "unitintegerfield": "",
+            "unitrealfield": "",
+            "unitstringfield": "",
+            "unitweaponbooleanfield": "",
+            "unitweaponintegerfield": "",
+            "unitweaponrealfield": "",
+            "unitweaponstringfield": ""
+        },
+        "aidifficulty": "",
+        "alliancetype": "",
+        "armortype": "",
+        "attacktype": "",
+        "blendmode": "",
+        "camerafield": "",
+        "camerasetup": "",
+        "commandbuttoneffect": "",
+        "connectiontype": "",
+        "damagetype": "",
+        "defensetype": "",
+        "effecttype": "",
+        "eventid": {
+            "dialogevent": "",
+            "gameevent": "",
+            "limitop": "",
+            "playerevent": "",
+            "playerunitevent": "",
+            "unitevent": "",
+            "widgetevent": ""
+        },
+        "flagtype": {
+            "abilitytype": "",
+            "collisiontype": "",
+            "controlstyleflag": "",
+            "framestate": "",
+            "gametype": "",
+            "gridstyleflag": "",
+            "layerstyleflag": "",
+            "layoutstyleflag": "",
+            "mapflag": "",
+            "movetype": "",
+            "pathingaitype": "",
+            "pathingflag": "",
+            "racepreference": "",
+            "targetflag": "",
+            "unitcategory": ""
+        },
+        "fogstate": "",
+        "frameeventtype": "",
+        "framepointtype": "",
+        "gamedifficulty": "",
+        "gamespeed": "",
+        "gamestate": {
+            "fgamestate": "",
+            "igamestate": ""
+        },
+        "heroattribute": "",
+        "image": "",
+        "itempool": "",
+        "itemtype": "",
+        "jassthread": "",
+        "lightning": "",
+        "mapcontrol": "",
+        "mapdensity": "",
+        "mappedfield": "",
+        "mappedtype": {
+            "animtype": {
+                "subanimtype": ""
+            },
+            "attachmenttype": {
+                "bonetype": ""
+            },
+            "cursoranimtype": ""
+        },
+        "mapsetting": "",
+        "mapvisibility": "",
+        "minimapicon": "",
+        "mousebuttontype": "",
+        "originframetype": "",
+        "oskeytype": "",
+        "pathingtype": "",
+        "placement": "",
+        "playercolor": "",
+        "playergameresult": "",
+        "playerscore": "",
+        "playerslotstate": "",
+        "playerstate": "",
+        "projectiletype": "",
+        "race": "",
+        "raritycontrol": "",
+        "regentype": "",
+        "renderstage": "",
+        "soundtype": "",
+        "startlocprio": "",
+        "terraindeformation": "",
+        "texmapflags": "",
+        "textaligntype": "",
+        "texttag": "",
+        "timetype": "",
+        "tradestate": "",
+        "ubersplat": "",
+        "unitpool": "",
+        "unitstate": "",
+        "unittype": "",
+        "variabletype": "",
+        "version": "",
+        "volumegroup": "",
+        "weapontype": "",
+        "weathereffect": ""
+    }
+}
