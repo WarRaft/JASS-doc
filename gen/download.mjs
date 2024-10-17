@@ -1,5 +1,5 @@
-import download from "./utils/download.mjs";
-import * as path from "node:path";
+import download from './utils/download.mjs'
+import * as path from 'node:path'
 
 download(
     'https://raw.githubusercontent.com/UnryzeC/UjAPI/main/uJAPIFiles/common.j',

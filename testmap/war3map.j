@@ -1,11 +1,34 @@
-function main takes nothing returns nothing
-    local integer A = MathRound(3.49) // 3
-    local integer B = MathRound(3.5) // 4
-    local integer C = MathRound(-3.49) // -3
-    local integer D = MathRound(-3.5) // -4
+globals
+    group destGroup = CreateGroup()
+    group sourceGroup = CreateGroup()
+endglobals
 
-    call ConsolePrint(I2S(A) + "\n" + I2S(B)+ "\n" + I2S(C)+ "\n" + I2S(D) + "\nZ")
+function gameStart takes nothing returns nothing
+    local unit u = CreateUnit(Player(0), 'uloc', 0, 0, 0) // Не игнорирует aloc
+
+    call GroupRemoveGroupEx(null, null) // Безопасна при работе с null
+
+    call GroupAddUnit(destGroup, u)
+    call GroupAddUnit(sourceGroup, u)
+
+    call ConsolePrint(I2S(GroupGetCount(destGroup))) // 1
+
+    call ConsolePrint(I2S(GroupRemoveGroupEx(destGroup, sourceGroup))) // 1
+    call ConsolePrint(I2S(GroupRemoveGroupEx(destGroup, sourceGroup))) // 0
+
+    call ConsolePrint(I2S(GroupGetCount(destGroup))) // 1
 endfunction
+
+function main takes nothing returns nothing
+    call TimerStart(CreateTimer(), 0, false, function gameStart)
+endfunction
+
+
+
+
+
+
+
 
 function config takes nothing returns nothing
     call SetMapName("TRIGSTR_003")

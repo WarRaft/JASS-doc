@@ -1,5 +1,15 @@
 # handle
 
+```plantuml
+@startuml
+left to right direction
+
+class handle {}
+
+hide members
+@enduml
+```
+
 Ссылки на внутриигровые объекты. Являются [integer](integer.md) и в первом приближении можно относиться к ним как к
 [примитивам](data-types.md#primitive).
 
