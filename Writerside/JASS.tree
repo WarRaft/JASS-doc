@@ -106,8 +106,17 @@
             <toc-element topic="GroupEnumUnitsSelected.md"/>
             <toc-element topic="GroupGetCount.md"/>
             <toc-element topic="GroupGetUnitByIndex.md"/>
+            <toc-element topic="GroupImmediateOrder.md">
+                <toc-element topic="GroupImmediateOrderById.md"/>
+            </toc-element>
+            <toc-element topic="GroupPointOrder.md">
+                <toc-element topic="GroupPointOrderById.md"/>
+            </toc-element>
             <toc-element topic="GroupRemoveGroupEx.md"/>
             <toc-element topic="GroupRemoveUnit.md"/>
+            <toc-element topic="GroupTargetOrder.md">
+                <toc-element topic="GroupTargetOrderById.md"/>
+            </toc-element>
         </toc-element>
     </toc-element>
     <toc-element topic="abilities.md">

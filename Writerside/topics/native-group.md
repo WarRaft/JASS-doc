@@ -41,15 +41,11 @@
 
 ## Приказ {id="order"}
 
-```
-native GroupImmediateOrder takes group whichGroup, string orderName returns boolean
-native GroupImmediateOrderById takes group whichGroup, integer orderId returns boolean
-
-native GroupPointOrder takes group whichGroup, string orderName, real x, real y returns boolean
-native GroupPointOrderById takes group whichGroup, integer orderId, real x, real y returns boolean
-
-native GroupTargetOrder takes group whichGroup, string orderName, widget targetWidget returns boolean
-native GroupTargetOrderById takes group whichGroup, integer orderId, widget targetWidget returns boolean
-```
+- [](GroupImmediateOrder.md)
+    - [](GroupImmediateOrderById.md)
+- [](GroupPointOrder.md)
+    - [](GroupPointOrderById.md)
+- [](GroupTargetOrder.md)
+    - [](GroupTargetOrderById.md)
 
 </snippet>
