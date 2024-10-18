@@ -20,7 +20,7 @@ endfunction
 
 function main takes nothing returns nothing
     call Test("A")
-    call ConsolePrint(I2S(A)) // 1
+    call ConsolePrint([[[I2S|I2S.md]]](A)) // 1
 endfunction
 ```
 

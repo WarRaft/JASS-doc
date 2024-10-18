@@ -11,6 +11,6 @@
 
 ```
 native SetUnitTargetable takes unit whichUnit, boolean targetable returns nothing
-native SetUnitSelectable takes unit whichUnit, boolean selectable returns nothing
+native [[[SetUnitSelectable|SetUnitSelectable.md]]] takes unit whichUnit, boolean selectable returns nothing
 native SetUnitInvulnerable takes unit whichUnit, boolean flag returns nothing
 ```

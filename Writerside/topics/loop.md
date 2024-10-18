@@ -46,7 +46,7 @@ function main takes nothing returns nothing
             if j > 9 then
                 exitwhen true
             endif
-        call ConsolePrint(I2S(i) + " * " + I2S(j) + " = " + I2S(i * j))
+        call ConsolePrint([[[I2S|I2S.md]]](i) + " * " + [[[I2S|I2S.md]]](j) + " = " + [[[I2S|I2S.md]]](i * j))
         endloop
     endloop
 endfunction

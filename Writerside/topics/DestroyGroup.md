@@ -11,7 +11,7 @@ function [[[main|main.md]]] takes [[[nothing|nothing.md]]] returns [[[nothing|no
     [[[local|local.md]]] [[[group|group.md]]] g = [[[CreateGroup|CreateGroup.md]]]()
     // ...
     call DestroyGroup(g)
-    set g = null
+    set g = [[[null|null.md]]]
 endfunction
 ```
 

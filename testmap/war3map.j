@@ -1,27 +1,19 @@
 globals
-    group destGroup = CreateGroup()
-    group sourceGroup = CreateGroup()
+    group g = CreateGroup()
 endglobals
 
 function gameStart takes nothing returns nothing
-    local unit u = CreateUnit(Player(0), 'uloc', 0, 0, 0) // Не игнорирует aloc
+    call ConsolePrint(GetUnitName(GroupGetUnitByIndex(null, null))) // Безопасна при работе с null
 
-    call GroupRemoveGroupEx(null, null) // Безопасна при работе с null
-
-    call GroupAddUnit(destGroup, u)
-    call GroupAddUnit(sourceGroup, u)
-
-    call ConsolePrint(I2S(GroupGetCount(destGroup))) // 1
-
-    call ConsolePrint(I2S(GroupRemoveGroupEx(destGroup, sourceGroup))) // 1
-    call ConsolePrint(I2S(GroupRemoveGroupEx(destGroup, sourceGroup))) // 0
-
-    call ConsolePrint(I2S(GroupGetCount(destGroup))) // 1
+    call GroupAddUnit(g, CreateUnit(Player(0), 'uloc', 0, 0, 0))
+    call GroupAddUnit(g, CreateUnit(Player(0), 'hfoo', 0, 0, 0))
+    call ConsolePrint(GetUnitName(GroupGetUnitByIndex(g, 1))) // Footman
 endfunction
 
 function main takes nothing returns nothing
     call TimerStart(CreateTimer(), 0, false, function gameStart)
 endfunction
+
 
 
 

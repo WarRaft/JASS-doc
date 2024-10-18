@@ -1,6 +1,6 @@
-# group
-
 <show-structure for="chapter,procedure" depth="3"/>
+
+# group
 
 Набор функций для работы с типом [](group.md).
 
@@ -15,35 +15,29 @@
 
 - [](GroupAddUnit.md)
 - [](GroupRemoveUnit.md)
-- [](GroupClear.md)
 - [](GroupAddGroupEx.md)
 - [](GroupRemoveGroupEx.md)
+- [](GroupClear.md)
 
 ### Перечисление {id="enum"}
 
-```
-native GroupEnumUnitsOfType takes group whichGroup, string unitname, boolexpr filter returns nothing
-native GroupEnumUnitsOfPlayer takes group whichGroup, player whichPlayer, boolexpr filter returns nothing
-native GroupEnumUnitsOfTypeCounted takes group whichGroup, string unitname, boolexpr filter, integer countLimit returns nothing
-native GroupEnumUnitsInRect takes group whichGroup, rect whichRect, boolexpr filter returns nothing
-native GroupEnumUnitsInRectCounted takes group whichGroup, rect whichRect, boolexpr filter, integer countLimit returns nothing
-native GroupEnumUnitsInRange takes group whichGroup, real x, real y, real radius, boolexpr filter returns nothing
-native GroupEnumUnitsInRangeCounted takes group whichGroup, real x, real y, real radius, boolexpr filter, integer countLimit returns nothing
-native GroupEnumUnitsSelected takes group whichGroup, player whichPlayer, boolexpr filter returns nothing
-```
+- [](GroupEnumUnitsInRange.md)
+    - [](GroupEnumUnitsInRangeCounted.md)
+- [](GroupEnumUnitsInRect.md)
+    - [](GroupEnumUnitsInRectCounted.md)
+- [](GroupEnumUnitsOfPlayer.md)
+- [](GroupEnumUnitsOfType.md)
+    - [](GroupEnumUnitsOfTypeCounted.md)
+- [](GroupEnumUnitsSelected.md)
 
-## Доступ {id="accesss"}
+## Доступ {id="access"}
 
 - [](GroupGetCount.md)
-
-```
-native ForGroup takes group whichGroup, code callback returns nothing
-native FirstOfGroup takes group whichGroup returns unit
-
-native GroupContainsUnit takes group whichGroup, unit whichUnit returns boolean
-
-native GroupGetUnitByIndex takes group whichGroup, integer index returns unit
-```
+- [](ForGroup.md)
+    - [](GetEnumUnit.md)
+- [](FirstOfGroup.md)
+- [](GroupGetUnitByIndex.md)
+- [](GroupContainsUnit.md)
 
 ## Приказ {id="order"}
 

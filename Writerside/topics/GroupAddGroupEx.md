@@ -12,17 +12,17 @@ globals
     group sourceGroup = [[[CreateGroup|CreateGroup.md]]]()
 endglobals
 
-function gameStart takes nothing returns nothing
+function gameStart takes [[[nothing|nothing.md]]] returns [[[nothing|nothing.md]]]
     call GroupAddGroupEx([[[null|null.md]]], [[[null|null.md]]]) // Безопасна при работе с [[[null|null.md]]]
 
     call GroupAddUnit(sourceGroup, CreateUnit(Player(0), '[[[uloc|aloc.md]]]', 0, 0, 0)) // Не игнорирует [[[aloc|aloc.md]]]
     
-    call ConsolePrint(I2S([[[GroupGetCount|GroupGetCount.md]]](destGroup))) // 0
+    call ConsolePrint([[[I2S|I2S.md]]]([[[GroupGetCount|GroupGetCount.md]]](destGroup))) // 0
     
-    call ConsolePrint(I2S(GroupAddGroupEx(destGroup, sourceGroup))) // 1
-    call ConsolePrint(I2S(GroupAddGroupEx(destGroup, sourceGroup))) // 0
+    call ConsolePrint([[[I2S|I2S.md]]](GroupAddGroupEx(destGroup, sourceGroup))) // 1
+    call ConsolePrint([[[I2S|I2S.md]]](GroupAddGroupEx(destGroup, sourceGroup))) // 0
     
-    call ConsolePrint(I2S([[[GroupGetCount|GroupGetCount.md]]](destGroup))) // 1
+    call ConsolePrint([[[I2S|I2S.md]]]([[[GroupGetCount|GroupGetCount.md]]](destGroup))) // 1
 endfunction
 
 function [[[main|main.md]]] takes [[[nothing|nothing.md]]] returns [[[nothing|nothing.md]]]

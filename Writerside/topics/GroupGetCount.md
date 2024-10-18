@@ -11,10 +11,10 @@ globals
     group g = [[[CreateGroup|CreateGroup.md]]]()
 endglobals
 
-function gameStart takes nothing returns nothing
+function gameStart takes [[[nothing|nothing.md]]] returns [[[nothing|nothing.md]]]
     local unit u
     
-    call ConsolePrint(I2S([[[GroupGetCount|GroupGetCount.md]]]([[[null|null.md]]]))) // Безопасна для [[[null|null.md]]]
+    call ConsolePrint([[[I2S|I2S.md]]]([[[GroupGetCount|GroupGetCount.md]]]([[[null|null.md]]]))) // Безопасна для [[[null|null.md]]]
     
     call GroupAddUnit(g, CreateUnit(Player(0), 'hfoo', 0, 0, 0))
     call GroupAddUnit(g, CreateUnit(Player(0), '[[[uloc|aloc.md]]]', 0, 0, 0)) // Не игнорирует [[[aloc|aloc.md]]]
@@ -27,7 +27,7 @@ function gameStart takes nothing returns nothing
     call [[[GroupAddUnit|GroupAddUnit.md]]](g, u)
     call RemoveUnit(u) // Считает удалённых юнитов
 
-    call ConsolePrint(I2S([[[GroupGetCount|GroupGetCount.md]]](g))) // 4
+    call ConsolePrint([[[I2S|I2S.md]]]([[[GroupGetCount|GroupGetCount.md]]](g))) // 4
     
     set u = null
 endfunction

@@ -43,7 +43,7 @@ endfunction
 function A takes integer B returns integer
     // local integer C = null // Ошибка! Нельзя явно присваивать null переменным с типом [[[integer|integer.md]]]
 
-    call ConsolePrint(I2S(B)) // В консоль выведется ноль
+    call ConsolePrint([[[I2S|I2S.md]]](B)) // В консоль выведется ноль
 
     if B == 0 then
         call ConsolePrint("Этот блок сработает ибо [[[null|null.md]]] приведён к нулю")
@@ -129,7 +129,7 @@ endfunction
 function A takes location B returns location
     local location C = null // Разрешено явно присваивать [[[null|null.md]]] переменным с типом наследующим [[[handle|handle.md]]]
 
-    call ConsolePrint(I2S(GetHandleId(B))) // В консоль будет выведен ноль, так как объект не создан
+    call ConsolePrint([[[I2S|I2S.md]]](GetHandleId(B))) // В консоль будет выведен ноль, так как объект не создан
 
     if B == null then
         call ConsolePrint("Этот блок сработает так как передан [[[null|null.md]]]")

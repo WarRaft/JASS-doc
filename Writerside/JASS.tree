@@ -3,8 +3,8 @@
         SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
 
 <instance-profile id="JASS"
-                 name="JASS"
-                 start-page="doc.md">
+                  name="JASS"
+                  start-page="doc.md">
 
     <toc-element topic="doc.md">
         <toc-element topic="data-types.md">
@@ -24,6 +24,7 @@
             <toc-element topic="code.md"/>
             <toc-element topic="handle.md">
                 <toc-element topic="agent.md">
+                    <toc-element topic="boolexpr.md"/>
                     <toc-element topic="group.md">
                     </toc-element>
                     <toc-element topic="war3image.md">
@@ -68,18 +69,43 @@
     <toc-element topic="native.md">
         <toc-element topic="native-type.md">
             <toc-element topic="I2R.md"/>
+            <toc-element topic="I2S.md"/>
             <toc-element topic="R2I.md"/>
         </toc-element>
         <toc-element topic="native-math.md">
             <toc-element topic="MathRound.md"/>
         </toc-element>
+        <toc-element topic="native-sync.md">
+            <toc-element topic="SyncSelections.md"/>
+        </toc-element>
+        <toc-element topic="native-select.md">
+            <toc-element topic="SelectUnit.md"/>
+            <toc-element topic="SetUnitSelectable.md"/>
+        </toc-element>
         <toc-element topic="native-group.md">
             <toc-element topic="CreateGroup.md"/>
             <toc-element topic="DestroyGroup.md"/>
+            <toc-element topic="FirstOfGroup.md"/>
+            <toc-element topic="ForGroup.md">
+                <toc-element topic="GetEnumUnit.md"/>
+            </toc-element>
             <toc-element topic="GroupAddGroupEx.md"/>
             <toc-element topic="GroupAddUnit.md"/>
             <toc-element topic="GroupClear.md"/>
+            <toc-element topic="GroupContainsUnit.md"/>
+            <toc-element topic="GroupEnumUnitsInRange.md">
+                <toc-element topic="GroupEnumUnitsInRangeCounted.md"/>
+            </toc-element>
+            <toc-element topic="GroupEnumUnitsInRect.md">
+                <toc-element topic="GroupEnumUnitsInRectCounted.md"/>
+            </toc-element>
+            <toc-element topic="GroupEnumUnitsOfPlayer.md"/>
+            <toc-element topic="GroupEnumUnitsOfType.md">
+                <toc-element topic="GroupEnumUnitsOfTypeCounted.md"/>
+            </toc-element>
+            <toc-element topic="GroupEnumUnitsSelected.md"/>
             <toc-element topic="GroupGetCount.md"/>
+            <toc-element topic="GroupGetUnitByIndex.md"/>
             <toc-element topic="GroupRemoveGroupEx.md"/>
             <toc-element topic="GroupRemoveUnit.md"/>
         </toc-element>
