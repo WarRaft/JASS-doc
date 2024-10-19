@@ -1,9 +1,23 @@
 function main takes nothing returns nothing
-    call ConsolePrint(R2SW(3, 0, -1) + "\n") // 3.0
-    call ConsolePrint(R2SW(.1 + .2, 0, -1) + "\n") // 0.3
-    call ConsolePrint(R2SW(7 / 9., 0, -100500) + "\n") // 0.777778
-    call ConsolePrint(R2SW(1123456/1000000., 0, -1) + "\n") // 1.123456
+    call ConsolePrint(R2SW(MathRealLog(3), 0, -1)+"\n")
+    call ConsolePrint(R2SW(MathRealLn(64), 0, -1)+"\n")
 endfunction
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function config takes nothing returns nothing
     call SetMapName("TRIGSTR_003")

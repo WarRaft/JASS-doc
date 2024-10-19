@@ -8,6 +8,6 @@ native MathRealMin takes [[[real|real.md]]] a, [[[real|real.md]]] b returns [[[r
 
 ```sql
 function [[[main|main.md]]] takes [[[nothing|nothing.md]]] returns [[[nothing|nothing.md]]]
-    call ConsolePrint([[[R2SW|R2SW.md]]](MathRealMin(-.3, -.2), 0, 5))  // -0.30000
+    call ConsolePrint([[[R2SW|R2SW.md]]](MathRealMin(-.3, -.2), 0, -1))  // -0.3
 endfunction
 ```
