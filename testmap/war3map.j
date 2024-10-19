@@ -1,26 +1,7 @@
-globals
-    group g = CreateGroup()
-endglobals
-
-function gameStart takes nothing returns nothing
-    call GroupTargetOrderById(null, null, null) // Безопасна при работе с null
-
-    loop
-        exitwhen GroupGetCount(g) >= 20
-        call GroupAddUnit(g, CreateUnit(Player(0), 'hfoo', 0, 0, 0))
-    endloop
-
-    if GroupTargetOrderById(g, 0xd0012, CreateUnit(Player(0), 'hfoo', 1000, 1000, 0)) then // move
-        call ConsolePrint("1")
-    else
-        call ConsolePrint("0")
-    endif
-
-endfunction
-
 function main takes nothing returns nothing
-    call TimerStart(CreateTimer(), 0, false, function gameStart)
+    call ConsolePrint(R2SW(I2R(3), 0, 5)) // 3.00000
 endfunction
+
 
 
 function config takes nothing returns nothing

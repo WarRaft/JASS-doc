@@ -9,8 +9,8 @@
 
 Применяет эффекты сразу от трёх функций:
 
-```
-native SetUnitTargetable takes unit whichUnit, boolean targetable returns nothing
-native [[[SetUnitSelectable|SetUnitSelectable.md]]] takes unit whichUnit, boolean selectable returns nothing
-native SetUnitInvulnerable takes unit whichUnit, boolean flag returns nothing
+```sql
+native SetUnitTargetable takes [[[unit|unit.md]]] whichUnit, boolean targetable returns nothing
+native [[[SetUnitSelectable|SetUnitSelectable.md]]] takes [[[unit|unit.md]]] whichUnit, boolean selectable returns nothing
+native SetUnitInvulnerable takes [[[unit|unit.md]]] whichUnit, boolean flag returns nothing
 ```

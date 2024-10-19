@@ -1,18 +1,17 @@
 # MathRound
 
 ```sql
-native MathRound takes real r returns integer
+native MathRound takes [[[real|real.md]]] r returns [[[integer|integer.md]]]
 ```
 
-Возвращает значение, которое представляет целое число, ближайшее к аргументу. Промежуточные значения
-округляются в сторону от нуля.
+Возвращает значение, которое представляет [целое число](integer.md), ближайшее к [аргументу](arguments.md).
+Промежуточные значения округляются в сторону от нуля.
 
 ```sql
-function main takes nothing returns nothing
-    local integer A = MathRound(3.49) // 3
-    local integer B = MathRound(3.5) // 4
-    local integer C = MathRound(-3.49) // -3
-    local integer D = MathRound(-3.5) // -4
+function [[[main|main.md]]] takes [[[nothing|nothing.md]]] returns [[[nothing|nothing.md]]]
+    ConsolePrint([[[I2S|I2S.md]]](MathRound(3.49))) // 3
+    ConsolePrint([[[I2S|I2S.md]]](MathRound(3.5))) // 4
+    ConsolePrint([[[I2S|I2S.md]]](MathRound(-3.49))) // -3
+    ConsolePrint([[[I2S|I2S.md]]](MathRound(-3.5)))// -4 
 endfunction
 ```
-

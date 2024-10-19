@@ -1,6 +1,7 @@
 # real
 
-[Вещественные числа](https://w.wiki/8D3B) - расширение понятия целых и рациональных чисел. Включают в себя все возможные числа на числовой
+[Вещественные числа](https://w.wiki/8D3B) - расширение понятия целых и рациональных чисел. Включают в себя все возможные
+числа на числовой
 прямой, включая, дробные и иррациональные числа.
 
 | Тип  | Бит | Байт | Диапазон значений   | Минимальное положительное число | Максимальное количество знаков |
@@ -16,3 +17,43 @@ endglobals
 ```
 
 > Вещественные числа реализованы в игре как [float](https://learn.microsoft.com/en-us/cpp/cpp/data-type-ranges).
+
+## Приведение типа {id="cast"}
+
+### integer {id="integer"}
+
+Преобразование [](integer.md) в `real` происходит автоматически.
+
+```sql
+function main takes nothing returns nothing
+    local real A = 012 // 10.000
+    local real B = 10  // 10.000
+    local real C = 0xA // 10.000
+    local real D = 'A' // 65.000
+    
+    local integer E = 10
+    local real F = E // 10.000 
+endfunction
+```
+
+### string {id="string"}
+
+Для получения `integer` из строки необходимо использовать функцию [](S2R.md).
+
+```sql
+globals
+    real A = [[[S2R|S2R.md]]]("-.3") // -0.300 
+endglobals
+```
+
+### Математика {id="math"}
+
+При выполнении математических операций между [](integer.md) и `real`, результат всегда будет иметь тип `real`.
+
+```sql
+function main takes nothing returns nothing
+    local real A = 5/2  // 2.000
+    local real B = 5/2. // 2.500
+endfunction
+```
+

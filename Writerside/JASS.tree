@@ -18,7 +18,6 @@
             <toc-element topic="numbers.md">
                 <toc-element topic="integer.md"/>
                 <toc-element topic="real.md"/>
-                <toc-element topic="numbers-convert.md"/>
             </toc-element>
             <toc-element topic="string.md"/>
             <toc-element topic="code.md"/>
@@ -71,8 +70,15 @@
             <toc-element topic="I2R.md"/>
             <toc-element topic="I2S.md"/>
             <toc-element topic="R2I.md"/>
+            <toc-element topic="R2S.md"/>
+            <toc-element topic="R2SW.md"/>
+            <toc-element topic="S2I.md"/>
+            <toc-element topic="S2R.md"/>
         </toc-element>
         <toc-element topic="native-math.md">
+            <toc-element topic="MathIntegerMin.md"/>
+            <toc-element topic="MathRealMin.md"/>
+            <toc-element topic="MathRealRound.md"/>
             <toc-element topic="MathRound.md"/>
         </toc-element>
         <toc-element topic="native-sync.md">
