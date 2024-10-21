@@ -76,8 +76,11 @@
             <toc-element topic="S2R.md"/>
         </toc-element>
         <toc-element topic="native-math.md">
+            <toc-element topic="Deg2Rad.md"/>
+            <toc-element topic="SquareRoot.md"/>
             <toc-element topic="GetAxisZ.md"/>
             <toc-element topic="MathAngleBetweenPoints.md"/>
+            <toc-element topic="Pow.md"/>
             <toc-element topic="MathDistanceBetweenPoints.md"/>
             <toc-element topic="MathIntegerAbs.md"/>
             <toc-element topic="MathIntegerClamp.md"/>
@@ -98,6 +101,7 @@
             <toc-element topic="MathRealRound.md"/>
             <toc-element topic="MathRealSign.md"/>
             <toc-element topic="MathRound.md"/>
+            <toc-element topic="Rad2Deg.md"/>
         </toc-element>
         <toc-element topic="native-sync.md">
             <toc-element topic="SyncSelections.md"/>

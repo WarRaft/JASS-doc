@@ -1,8 +1,6 @@
 function main takes nothing returns nothing
-    call ConsolePrint(R2S(MathDistanceBetweenPoints(0, 0, 3, 4)))   // 5.000
+    call ConsolePrint(R2S(SquareRoot(256)))  // 3.142
 endfunction
-
-
 
 
 

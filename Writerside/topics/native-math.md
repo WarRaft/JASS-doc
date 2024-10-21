@@ -30,6 +30,8 @@
 
 ## Вычисление {id="compute"}
 
+- [](Pow.md)
+- [](SquareRoot.md)
 - Modulo
     - [](MathRealModulo.md)
     - [](MathIntegerModulo.md)
@@ -37,6 +39,9 @@
 
 ## Геометрия {id="geometry"}
 
+- Конвертация углов
+    - [](Deg2Rad.md)
+    - [](Rad2Deg.md)
 - Полярное смещение
     - [](MathPointProjectionX.md)
     - [](MathPointProjectionY.md)
@@ -48,24 +53,6 @@
 - [](GetAxisZ.md)
 
 ```sql
-
-//============================================================================
-// MathAPI
-// Returns 0 if x <= 0
-native SquareRoot takes real x returns real
-
-// computes x to the y power
-// y == 0.0 => 1
-// x ==0.0 and y < 0	=> 0
-//
-native Pow takes real x, real power returns real
-
-
-3,141592
-
-native Deg2Rad takes real degrees returns real
-native Rad2Deg takes real radians returns real
-
 
 https://w.wiki/9ot7
 
