@@ -8,6 +8,6 @@ native MathRealMax takes [[[real|real.md]]] a, [[[real|real.md]]] b returns [[[r
 
 ```sql
 function [[[main|main.md]]] takes [[[nothing|nothing.md]]] returns [[[nothing|nothing.md]]]
-    call ConsolePrint([[[R2SW|R2SW.md]]](MathRealMax(-.3, -.2), 0, -1))  // -0.2
+    call ConsolePrint([[[R2S|R2S.md]]](MathRealMax(-.3, -.2)))  // -0.200
 endfunction
 ```

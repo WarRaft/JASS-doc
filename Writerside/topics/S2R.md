@@ -14,9 +14,9 @@ native S2R takes [[[string|string.md]]] s returns [[[real|real.md]]]
 
 ```sql
 function [[[main|main.md]]] takes [[[nothing|nothing.md]]] returns [[[nothing|nothing.md]]]
-    call ConsolePrint([[[R2SW|R2SW.md]]](S2R("в любой непонятной ситуации возвращает ноль"), 0, 9) + "\n") // 0.000000000
-    call ConsolePrint([[[R2SW|R2SW.md]]](S2R("-.12 символы после числа игнорируются"), 0, 9) + "\n") // -0.120000000
-    call ConsolePrint([[[R2SW|R2SW.md]]](S2R(" 3. пробелы в начале числа не игнорируются"), 0, 9) + "\n") // 0.000000000
-    call ConsolePrint([[[R2SW|R2SW.md]]](S2R("4.5.6 вторая точка игнорируется"), 0, 9) + "\n") // 4.500000000
+    call ConsolePrint([[[R2S|R2S.md]]](S2R("в любой непонятной ситуации возвращает ноль"), 0, 9) + "\n") // 0.000
+    call ConsolePrint([[[R2S|R2S.md]]](S2R("-.12 символы после числа игнорируются"), 0, 9) + "\n") // -0.120
+    call ConsolePrint([[[R2S|R2S.md]]](S2R(" 3. пробелы в начале числа не игнорируются"), 0, 9) + "\n") // 0.000
+    call ConsolePrint([[[R2S|R2S.md]]](S2R("4.5.6 вторая точка игнорируется"), 0, 9) + "\n") // 4.500
 endfunction
 ```

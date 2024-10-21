@@ -1,12 +1,6 @@
 function main takes nothing returns nothing
-    call ConsolePrint(R2SW(MathRealLog(3), 0, -1)+"\n")
-    call ConsolePrint(R2SW(MathRealLn(64), 0, -1)+"\n")
+    call ConsolePrint(R2S(MathDistanceBetweenPoints(0, 0, 3, 4)))   // 5.000
 endfunction
-
-
-
-
-
 
 
 

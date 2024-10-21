@@ -76,15 +76,25 @@
             <toc-element topic="S2R.md"/>
         </toc-element>
         <toc-element topic="native-math.md">
+            <toc-element topic="GetAxisZ.md"/>
+            <toc-element topic="MathAngleBetweenPoints.md"/>
+            <toc-element topic="MathDistanceBetweenPoints.md"/>
+            <toc-element topic="MathIntegerAbs.md"/>
             <toc-element topic="MathIntegerClamp.md"/>
             <toc-element topic="MathIntegerMax.md"/>
             <toc-element topic="MathIntegerMin.md"/>
+            <toc-element topic="MathIntegerModulo.md"/>
             <toc-element topic="MathIntegerSign.md"/>
-            <toc-element topic="MathIntegerAbs.md"/>
+            <toc-element topic="MathPointProjectionX.md"/>
+            <toc-element topic="MathPointProjectionY.md"/>
             <toc-element topic="MathRealAbs.md"/>
+            <toc-element topic="MathRealCeil.md"/>
             <toc-element topic="MathRealClamp.md"/>
+            <toc-element topic="MathRealFloor.md"/>
+            <toc-element topic="MathRealLerp.md"/>
             <toc-element topic="MathRealMax.md"/>
             <toc-element topic="MathRealMin.md"/>
+            <toc-element topic="MathRealModulo.md"/>
             <toc-element topic="MathRealRound.md"/>
             <toc-element topic="MathRealSign.md"/>
             <toc-element topic="MathRound.md"/>
