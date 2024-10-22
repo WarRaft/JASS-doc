@@ -76,11 +76,17 @@
             <toc-element topic="S2R.md"/>
         </toc-element>
         <toc-element topic="native-math.md">
+            <toc-element topic="Acos.md"/>
+            <toc-element topic="Asin.md"/>
+            <toc-element topic="Atan.md">
+            </toc-element>
+            <toc-element topic="Atan2.md"/>
+            <toc-element topic="Cos.md">
+                <toc-element topic="MathCosDeg.md"/>
+            </toc-element>
             <toc-element topic="Deg2Rad.md"/>
-            <toc-element topic="SquareRoot.md"/>
             <toc-element topic="GetAxisZ.md"/>
             <toc-element topic="MathAngleBetweenPoints.md"/>
-            <toc-element topic="Pow.md"/>
             <toc-element topic="MathDistanceBetweenPoints.md"/>
             <toc-element topic="MathIntegerAbs.md"/>
             <toc-element topic="MathIntegerClamp.md"/>
@@ -101,7 +107,15 @@
             <toc-element topic="MathRealRound.md"/>
             <toc-element topic="MathRealSign.md"/>
             <toc-element topic="MathRound.md"/>
+            <toc-element topic="Pow.md"/>
             <toc-element topic="Rad2Deg.md"/>
+            <toc-element topic="Sin.md">
+                <toc-element topic="MathSinDeg.md"/>
+            </toc-element>
+            <toc-element topic="SquareRoot.md"/>
+            <toc-element topic="Tan.md">
+                <toc-element topic="MathTanDeg.md"/>
+            </toc-element>
         </toc-element>
         <toc-element topic="native-sync.md">
             <toc-element topic="SyncSelections.md"/>

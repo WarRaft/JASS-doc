@@ -47,31 +47,20 @@
     - [](MathPointProjectionY.md)
 - [](MathAngleBetweenPoints.md)
 - [](MathDistanceBetweenPoints.md)
+- Косинус
+    - [](Cos.md)
+        - [](MathCosDeg.md)
+    - [](Acos.md)
+- Синус
+    - [](Sin.md)
+        - [](MathSinDeg.md)
+    - [](Asin.md)
+- Тангенс
+    - [](Tan.md)
+        - [](MathTanDeg.md)
+    - [](Atan.md)
+    - [](Atan2.md)
 
 ## Данные игры {id="game"}
 
 - [](GetAxisZ.md)
-
-```sql
-
-https://w.wiki/9ot7
-
-native Sin takes real radians returns real
-native MathSinDeg takes real r returns real
-// Expect values between -1 and 1...returns 0 for invalid input
-native Asin takes real y returns real
-
-native Cos takes real radians returns real
-native MathCosDeg takes real r returns real
-// Expect values between -1 and 1...returns 0 for invalid input
-native Acos takes real x returns real
-
-native Tan takes real radians returns real
-native MathTanDeg takes real r returns real
-// Expect values between -1 and 1...returns 0 for invalid input
-native Atan takes real x returns real
-
-// Returns 0 if x and y are both 0
-native Atan2 takes real y, real x returns real
-
-```
