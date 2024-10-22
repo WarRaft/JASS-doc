@@ -23,11 +23,11 @@ function gameStart takes [[[nothing|nothing.md]]] returns [[[nothing|nothing.md]
     call [[[SyncSelections|SyncSelections.md]]]()
     call GroupEnumUnitsSelected(g, Player(0), [[[null|null.md]]])
     call ConsolePrint([[[I2S|I2S.md]]]([[[GroupGetCount|GroupGetCount.md]]](g))) // 1
-    
-    call [[[SelectUnit|SelectUnit.md]]](CreateUnit(Player(0), 'hfoo', 0, 0, 0), true)
+   
+    call ClearSelection()
     call [[[SyncSelections|SyncSelections.md]]]()
-    call GroupEnumUnitsSelected(g, Player(0), [[[null|null.md]]]) // Не очищает группу перед вызовом
-    call ConsolePrint([[[I2S|I2S.md]]]([[[GroupGetCount|GroupGetCount.md]]](g))) // 2
+    call GroupEnumUnitsSelected(g, Player(0), [[[null|null.md]]]) // Очищает группу перед вызовом
+    call ConsolePrint([[[I2S|I2S.md]]]([[[GroupGetCount|GroupGetCount.md]]](g))) // 0
 endfunction
 
 function [[[main|main.md]]] takes [[[nothing|nothing.md]]] returns [[[nothing|nothing.md]]]

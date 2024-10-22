@@ -24,9 +24,8 @@ function gameStart takes [[[nothing|nothing.md]]] returns [[[nothing|nothing.md]
     call GroupEnumUnitsOfPlayer(g, Player(0), [[[null|null.md]]])
     call ConsolePrint([[[I2S|I2S.md]]]([[[GroupGetCount|GroupGetCount.md]]](g))) // 4
     
-    call CreateUnit(Player(0), 'hfoo', 0, 0, 0)
-    call GroupEnumUnitsOfPlayer(g, Player(0), [[[null|null.md]]]) // Не очищает группу перед вызовом
-    call ConsolePrint([[[I2S|I2S.md]]]([[[GroupGetCount|GroupGetCount.md]]](g))) // 5
+    call GroupEnumUnitsOfPlayer(g, Player(1), [[[null|null.md]]]) // Очищает группу перед вызовом
+    call ConsolePrint([[[I2S|I2S.md]]]([[[GroupGetCount|GroupGetCount.md]]](g))) // 0
 endfunction
 
 function [[[main|main.md]]] takes [[[nothing|nothing.md]]] returns [[[nothing|nothing.md]]]
