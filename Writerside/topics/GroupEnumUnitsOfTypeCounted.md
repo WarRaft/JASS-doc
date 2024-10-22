@@ -26,13 +26,6 @@ function gameStart takes [[[nothing|nothing.md]]] returns [[[nothing|nothing.md]
     
     call GroupEnumUnitsOfTypeCounted(g, "footman", [[[null|null.md]]], 1)
     call ConsolePrint([[[I2S|I2S.md]]]([[[GroupGetCount|GroupGetCount.md]]](g))) // 3
-   
-    call CreateUnit(Player(0), 'hfoo', 0, 0, 0)
-    call CreateUnit(Player(0), 'hfoo', 0, 0, 0)
-    call CreateUnit(Player(0), 'hfoo', 0, 0, 0)
-   
-    call GroupEnumUnitsOfTypeCounted(g, "footman", [[[null|null.md]]], 1)
-    call ConsolePrint([[[I2S|I2S.md]]]([[[GroupGetCount|GroupGetCount.md]]](g))) // 6
 endfunction
 
 function [[[main|main.md]]] takes [[[nothing|nothing.md]]] returns [[[nothing|nothing.md]]]
