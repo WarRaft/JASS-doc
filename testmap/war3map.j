@@ -18,6 +18,7 @@ function OnTimer takes nothing returns nothing
     local real time = LoadReal(HT, tid, 'time')
     local unit cstr = LoadUnitHandle(HT, tid, 'cstr')
     local unit dumy = LoadUnitHandle(HT, tid, 'dumy')
+    local unit aimt = LoadUnitHandle(HT, tid, 'aimt')
     local real cx = LoadReal(HT, tid, 'cx__')
     local real cy = LoadReal(HT, tid, 'cy__')
     local real ox = LoadReal(HT, tid, 'ox__')
@@ -34,15 +35,11 @@ function OnTimer takes nothing returns nothing
         set k = 1
     endif
 
+    call SetUnitX(aimt, MathRealLerp_ujapi(cx, ox, k + .5))
+    call SetUnitY(aimt, MathRealLerp_ujapi(cy, oy, k + .5))
+
     call SetUnitX(dumy, MathRealLerp_ujapi(cx, ox, k))
     call SetUnitY(dumy, MathRealLerp_ujapi(cy, oy, k))
-
-    //set nx = MathRealLerp_ujapi(cx, ox, k + .01)
-    //set ny = MathRealLerp_ujapi(cy, oy, k + .01)
-    //call SetUnitLookAt(dumy, "bone_head", dumy, nx, ny, GetAxisZ_ujapi(nx, ny))
-    //call ResetUnitLookAt(dumy)
-    //call SetUnitLookAt(dumy, "Bone_Head", cstr, 0, 0, 0)
-
 
     call SaveReal(HT, tid, 'runt', runt + .01)
 
@@ -51,12 +48,15 @@ function OnTimer takes nothing returns nothing
         call DestroyTimer(t)
         call DestroyEffect(efct)
         call KillUnit(dumy)
+        call KillUnit(aimt)
+
         call FlushChildHashtable(HT, tid)
     endif
 
     set t = null
     set cstr = null
     set dumy = null
+    set aimt = null
     set efct = null
 endfunction
 
@@ -64,6 +64,7 @@ function OnOrder takes nothing returns nothing
     local timer t
     local integer tid
     local unit dumy
+    local unit aimt
     local unit cstr = GetTriggerUnit()
     local real cx = GetUnitX(cstr)
     local real cy = GetUnitY(cstr)
@@ -71,7 +72,7 @@ function OnOrder takes nothing returns nothing
     local real oy = GetOrderPointY()
     local real dx = ox - cx
     local real dy = oy - cy
-    local real time = SquareRoot(dx * dx + dy * dy) / 400  // время = расстояние / скорость
+    local real time = SquareRoot(dx * dx + dy * dy) / 500  // время = расстояние / скорость
 
     // attack = 0xd000f /* 851983 */
     if GetIssuedOrderId() != 851983 then
@@ -84,10 +85,15 @@ function OnOrder takes nothing returns nothing
 
     call SaveUnitHandle(HT, tid, 'cstr', cstr)
 
-    set dumy = CreateUnit(Player(0), 'dumy', cx, cy, 0)
-    call SetUnitLookAt(dumy, "Bone_Head", cstr, 0, 0, 0)
-
+    set dumy = CreateUnit(Player(0), 'dumy', cx, cy, Atan2(dy, dx) * bj_RADTODEG)
     call SaveUnitHandle(HT, tid, 'dumy', dumy)
+
+    set aimt = CreateUnit(Player(0), 'dumy', MathRealLerp_ujapi(cx, ox, .01), MathRealLerp_ujapi(cy, oy, .01), 0)
+    call SaveUnitHandle(HT, tid, 'aimt', aimt)
+    //call AddSpecialEffectTarget("Buildings\\Other\\BarrelsUnit0\\BarrelsUnit0.mdl", dumy, "head")
+
+    call SetUnitLookAt(dumy, "bone_head", aimt, 0, 0, 0)
+
     call SaveEffectHandle(HT, tid, 'efct', AddSpecialEffectTarget("Missile\\MaizConArrow.mdx", dumy, "head"))
 
     call SaveReal(HT, tid, 'time', time)
@@ -105,6 +111,7 @@ endfunction
 function gameStart takes nothing returns nothing
     local trigger t = CreateTrigger()
     local unit caster = CreateUnit(Player(0), 'hfoo', 0, 0, 0)
+
     call SelectUnit(caster, true)
 
     call TriggerRegisterPlayerUnitEvent(t, Player(0), EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER, null)
