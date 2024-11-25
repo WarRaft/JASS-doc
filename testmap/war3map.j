@@ -1,14 +1,117 @@
 globals
-    unit Caster
-    unit Dummy
-
+    hashtable HT = InitHashtable()
+    location L = Location(0, 0) // GetAxisZ_ujapi
 endglobals
 
+function GetAxisZ_ujapi takes real x, real y returns real
+    call MoveLocation(L, x, y)
+    return GetLocationZ(L)
+endfunction
+
+function MathRealLerp_ujapi takes real a, real b, real t returns real
+    return a * (1-t) + b * t
+endfunction
+
+function OnTimer takes nothing returns nothing
+    local timer t = GetExpiredTimer()
+    local integer tid = GetHandleId(t)
+    local real time = LoadReal(HT, tid, 'time')
+    local unit cstr = LoadUnitHandle(HT, tid, 'cstr')
+    local unit dumy = LoadUnitHandle(HT, tid, 'dumy')
+    local real cx = LoadReal(HT, tid, 'cx__')
+    local real cy = LoadReal(HT, tid, 'cy__')
+    local real ox = LoadReal(HT, tid, 'ox__')
+    local real oy = LoadReal(HT, tid, 'oy__')
+    local real nx
+    local real ny
+    local real runt = LoadReal(HT, tid, 'runt')
+    local real k = runt / time
+    local boolean complete = false
+    local effect efct = LoadEffectHandle(HT, tid, 'efct')
+
+    if k > 1 then
+        set complete = true
+        set k = 1
+    endif
+
+    call SetUnitX(dumy, MathRealLerp_ujapi(cx, ox, k))
+    call SetUnitY(dumy, MathRealLerp_ujapi(cy, oy, k))
+
+    //set nx = MathRealLerp_ujapi(cx, ox, k + .01)
+    //set ny = MathRealLerp_ujapi(cy, oy, k + .01)
+    //call SetUnitLookAt(dumy, "bone_head", dumy, nx, ny, GetAxisZ_ujapi(nx, ny))
+    //call ResetUnitLookAt(dumy)
+    //call SetUnitLookAt(dumy, "Bone_Head", cstr, 0, 0, 0)
+
+
+    call SaveReal(HT, tid, 'runt', runt + .01)
+
+    if complete then
+        call PauseTimer(t)
+        call DestroyTimer(t)
+        call DestroyEffect(efct)
+        call KillUnit(dumy)
+        call FlushChildHashtable(HT, tid)
+    endif
+
+    set t = null
+    set cstr = null
+    set dumy = null
+    set efct = null
+endfunction
+
+function OnOrder takes nothing returns nothing
+    local timer t
+    local integer tid
+    local unit dumy
+    local unit cstr = GetTriggerUnit()
+    local real cx = GetUnitX(cstr)
+    local real cy = GetUnitY(cstr)
+    local real ox = GetOrderPointX()
+    local real oy = GetOrderPointY()
+    local real dx = ox - cx
+    local real dy = oy - cy
+    local real time = SquareRoot(dx * dx + dy * dy) / 400  // время = расстояние / скорость
+
+    // attack = 0xd000f /* 851983 */
+    if GetIssuedOrderId() != 851983 then
+        set cstr = null
+        return
+    endif
+
+    set t = CreateTimer()
+    set tid = GetHandleId(t)
+
+    call SaveUnitHandle(HT, tid, 'cstr', cstr)
+
+    set dumy = CreateUnit(Player(0), 'dumy', cx, cy, 0)
+    call SetUnitLookAt(dumy, "Bone_Head", cstr, 0, 0, 0)
+
+    call SaveUnitHandle(HT, tid, 'dumy', dumy)
+    call SaveEffectHandle(HT, tid, 'efct', AddSpecialEffectTarget("Missile\\MaizConArrow.mdx", dumy, "head"))
+
+    call SaveReal(HT, tid, 'time', time)
+    call SaveReal(HT, tid, 'cx__', cx)
+    call SaveReal(HT, tid, 'cy__', cy)
+    call SaveReal(HT, tid, 'ox__', ox)
+    call SaveReal(HT, tid, 'oy__', oy)
+
+    call TimerStart(t, .01, true, function OnTimer)
+
+    set cstr = null
+    set dumy = null
+endfunction
 
 function gameStart takes nothing returns nothing
-    local unit u = CreateUnit(Player(0), 'hfoo', 0, 0, 0)
+    local trigger t = CreateTrigger()
+    local unit caster = CreateUnit(Player(0), 'hfoo', 0, 0, 0)
+    call SelectUnit(caster, true)
 
+    call TriggerRegisterPlayerUnitEvent(t, Player(0), EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER, null)
+    call TriggerAddAction(t, function OnOrder)
 
+    set t = null
+    set caster = null
 endfunction
 
 function main takes nothing returns nothing
