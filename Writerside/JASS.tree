@@ -27,6 +27,7 @@
                     <toc-element topic="group.md">
                     </toc-element>
                     <toc-element topic="war3image.md">
+                        <toc-element topic="projectile.md"/>
                         <toc-element topic="widget.md">
                             <toc-element topic="unit.md"/>
                         </toc-element>
@@ -160,6 +161,7 @@
                 <toc-element topic="GroupTargetOrderById.md"/>
             </toc-element>
         </toc-element>
+        <toc-element topic="native-projectile.md"/>
     </toc-element>
     <toc-element topic="abilities.md">
         <toc-element topic="aloc.md"/>

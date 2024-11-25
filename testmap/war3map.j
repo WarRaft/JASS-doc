@@ -1,19 +1,14 @@
 globals
-    group g = CreateGroup()
+    unit Caster
+    unit Dummy
+
 endglobals
 
+
 function gameStart takes nothing returns nothing
-    call GroupEnumUnitsSelected(null, null, null) // Безопасна при работе с null
+    local unit u = CreateUnit(Player(0), 'hfoo', 0, 0, 0)
 
-    call SelectUnit(CreateUnit(Player(0), 'hfoo', 0, 0, 0), true)
-    call SyncSelections()
-    call GroupEnumUnitsSelected(g, Player(0), null)
-    call ConsolePrint(I2S(GroupGetCount(g))) // 1
 
-    call ClearSelection()
-    call SyncSelections()
-    call GroupEnumUnitsSelected(g, Player(0), null) // Очищает группу перед вызовом
-    call ConsolePrint(I2S(GroupGetCount(g))) // 0
 endfunction
 
 function main takes nothing returns nothing
