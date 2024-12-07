@@ -7,12 +7,16 @@
 <snippet id="main">
 
 ```
+CArtillery extends CBullet ...
+CMissile extends CBullet ...
+
+А CBullet уже базовый для всего говна.
+
 
 //============================================================================
 // Projectile API
 // For Projectile Type Ids: https://github.com/UnryzeC/UjAPI/blob/main/TypeData/ in there check out these files: WC3BulletList.txt / WC3MissileList.txt / WC3ArtilleryList.txt
 //
-native CreateProjectile takes integer projectileTypeId returns projectile
 native CreateProjectileEx takes unit owner, integer projectileTypeId, integer attackIndex returns projectile
 native SetProjectileUnitData takes projectile whichProjectile, unit owner, integer attackIndex returns nothing
 native KillProjectile takes projectile whichProjectile returns nothing

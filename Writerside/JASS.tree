@@ -4,68 +4,66 @@
 
 <instance-profile id="JASS"
                   name="JASS"
-                  start-page="doc.md">
+                  start-page="about.md">
 
-    <toc-element topic="doc.md">
-        <toc-element topic="data-types.md">
-            <toc-element topic="nothing.md"/>
-            <toc-element topic="boolean.md">
-                <toc-element topic="true.md"/>
-                <toc-element topic="false.md"/>
-                <toc-element topic="boolean-operator.md"/>
-            </toc-element>
-            <toc-element topic="null.md"/>
-            <toc-element topic="numbers.md">
-                <toc-element topic="integer.md"/>
-                <toc-element topic="real.md"/>
-            </toc-element>
-            <toc-element topic="string.md"/>
-            <toc-element topic="code.md"/>
-            <toc-element topic="handle.md">
-                <toc-element topic="agent.md">
-                    <toc-element topic="boolexpr.md"/>
-                    <toc-element topic="group.md">
-                    </toc-element>
-                    <toc-element topic="war3image.md">
-                        <toc-element topic="projectile.md"/>
-                        <toc-element topic="widget.md">
-                            <toc-element topic="unit.md"/>
-                        </toc-element>
+    <toc-element topic="about.md"/>
+    <toc-element topic="data-types.md">
+        <toc-element topic="nothing.md"/>
+        <toc-element topic="boolean.md">
+            <toc-element topic="true.md"/>
+            <toc-element topic="false.md"/>
+            <toc-element topic="boolean-operator.md"/>
+        </toc-element>
+        <toc-element topic="null.md"/>
+        <toc-element topic="numbers.md">
+            <toc-element topic="integer.md"/>
+            <toc-element topic="real.md"/>
+        </toc-element>
+        <toc-element topic="string.md"/>
+        <toc-element topic="code.md"/>
+        <toc-element topic="handle.md">
+            <toc-element topic="agent.md">
+                <toc-element topic="boolexpr.md"/>
+                <toc-element topic="group.md"/>
+                <toc-element topic="war3image.md">
+                    <toc-element topic="projectile.md"/>
+                    <toc-element topic="widget.md">
+                        <toc-element topic="unit.md"/>
                     </toc-element>
                 </toc-element>
             </toc-element>
         </toc-element>
-        <toc-element topic="operator.md">
-            <toc-element topic="operator-boolean.md">
-                <toc-element topic="and.md"/>
-                <toc-element topic="or.md"/>
-                <toc-element topic="not.md"/>
-                <toc-element topic="operator-boolean-lazy.md"/>
-            </toc-element>
-        </toc-element>
-        <toc-element topic="function.md">
-            <toc-element topic="main.md"/>
-            <toc-element topic="config.md"/>
-            <toc-element topic="call.md">
-                <toc-element topic="recursion.md"/>
-                <toc-element topic="ExecuteFunc.md"/>
-                <toc-element topic="ExecuteCode.md"/>
-            </toc-element>
-            <toc-element topic="return.md"/>
-            <toc-element topic="arguments.md"/>
-        </toc-element>
-        <toc-element topic="variable.md">
-            <toc-element topic="globals.md"/>
-            <toc-element topic="local.md"/>
-            <toc-element topic="var-init.md"/>
-            <toc-element topic="set.md"/>
-            <toc-element topic="array.md"/>
-            <toc-element topic="shadowing.md"/>
-        </toc-element>
-        <toc-element topic="expressions.md"/>
-        <toc-element topic="condition.md"/>
-        <toc-element topic="loop.md"/>
     </toc-element>
+    <toc-element topic="operator.md">
+        <toc-element topic="operator-boolean.md">
+            <toc-element topic="and.md"/>
+            <toc-element topic="or.md"/>
+            <toc-element topic="not.md"/>
+            <toc-element topic="operator-boolean-lazy.md"/>
+        </toc-element>
+    </toc-element>
+    <toc-element topic="function.md">
+        <toc-element topic="main.md"/>
+        <toc-element topic="config.md"/>
+        <toc-element topic="call.md">
+            <toc-element topic="recursion.md"/>
+            <toc-element topic="ExecuteFunc.md"/>
+            <toc-element topic="ExecuteCode.md"/>
+        </toc-element>
+        <toc-element topic="return.md"/>
+        <toc-element topic="arguments.md"/>
+    </toc-element>
+    <toc-element topic="variable.md">
+        <toc-element topic="globals.md"/>
+        <toc-element topic="local.md"/>
+        <toc-element topic="var-init.md"/>
+        <toc-element topic="set.md"/>
+        <toc-element topic="array.md"/>
+        <toc-element topic="shadowing.md"/>
+    </toc-element>
+    <toc-element topic="expressions.md"/>
+    <toc-element topic="condition.md"/>
+    <toc-element topic="loop.md"/>
     <toc-element topic="native.md">
         <toc-element topic="native-type.md">
             <toc-element topic="I2R.md"/>
@@ -79,8 +77,7 @@
         <toc-element topic="native-math.md">
             <toc-element topic="Acos.md"/>
             <toc-element topic="Asin.md"/>
-            <toc-element topic="Atan.md">
-            </toc-element>
+            <toc-element topic="Atan.md"/>
             <toc-element topic="Atan2.md"/>
             <toc-element topic="Cos.md">
                 <toc-element topic="MathCosDeg.md"/>
@@ -161,7 +158,9 @@
                 <toc-element topic="GroupTargetOrderById.md"/>
             </toc-element>
         </toc-element>
-        <toc-element topic="native-projectile.md"/>
+        <toc-element topic="native-projectile.md">
+            <toc-element topic="CreateProjectile.md"/>
+        </toc-element>
     </toc-element>
     <toc-element topic="abilities.md">
         <toc-element topic="aloc.md"/>
