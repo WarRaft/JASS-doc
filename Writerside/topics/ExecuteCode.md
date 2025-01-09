@@ -1,13 +1,12 @@
 # ExecuteCode
 
-Отвечая на запросы трудящихся, в [UjAPI](https://unryzec.github.io/UjAPI) был реализован адекватный
-аналог [](ExecuteFunc.md):
+<primary-label ref="ujapi"/>
+
 ```SQL
 native ExecuteCode takes code c returns nothing
 ```
 
-Она использует тип [](code.md), тем самым производя штатный вызов функции который практически ничем не отличается от
-явного [](call.md).
+Вызывает функцию используя тип [](code.md).
 
 ```SQL
 function A takes code B returns nothing

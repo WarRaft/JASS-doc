@@ -45,7 +45,7 @@ endif
 
 ## Условие {id="condition"}
 
-В условии может быть всё что угодно, что можно присвоить переменной имеющей [](boolean.md):
+В условии может быть всё что угодно, что можно присвоить переменной имеющей тип [](boolean.md):
 
 ```sql
 function IsPositive takes integer i returns boolean

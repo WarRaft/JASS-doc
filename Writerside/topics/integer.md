@@ -2,9 +2,8 @@
 
 <show-structure for="chapter,procedure" depth="3"/>
 
-[Целые числа](https://w.wiki/9eVi) представлены в диапазоне от `-2,147,483,648` до `2,147,483,647`.
-
-> Целые числа реализованы в игре как [int32](https://learn.microsoft.com/en-us/cpp/cpp/data-type-ranges).
+[Целые числа](https://w.wiki/9eVi) представлены в диапазоне от `-2,147,483,648` до `2,147,483,647` и реализованы в игре
+как [int32](https://learn.microsoft.com/en-us/cpp/cpp/data-type-ranges).
 
 ## Восьмеричная запись {id="radix8"}
 
@@ -30,7 +29,7 @@ endglobals
 
 ## Шестнадцатеричная запись {id="hex"}
 
-Запись в [шестнадцатеричной](https://w.wiki/4BNZ) системе счисления начинается с **0x** __(ноль икс)__ или c **$**:
+Запись в [шестнадцатеричной](https://w.wiki/4BNZ) системе счисления начинается с `0x` _(ноль икс)_ или c `$`:
 
 ```SQL
 globals

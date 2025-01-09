@@ -1,5 +1,7 @@
 # MathRound
 
+<primary-label ref="ujapi"/>
+
 ```sql
 native MathRound takes [[[real|real.md]]] r returns [[[integer|integer.md]]]
 ```
